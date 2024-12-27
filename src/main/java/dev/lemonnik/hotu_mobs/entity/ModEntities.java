@@ -2,6 +2,7 @@ package dev.lemonnik.hotu_mobs.entity;
 
 import dev.lemonnik.hotu_mobs.HOTUMobs;
 import dev.lemonnik.hotu_mobs.entity.custom.Bear;
+import dev.lemonnik.hotu_mobs.entity.custom.Knight;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -19,6 +20,12 @@ public class ModEntities {
                     () -> EntityType.Builder.of(Bear::new, MobCategory.MONSTER)
                             .sized(1.5f, 1.75f)
                             .build(new ResourceLocation(HOTUMobs.MODID, "bear").toString()));
+
+    public static final RegistryObject<EntityType<Knight>> KNIGHT =
+            ENTITY_TYPES.register("knight",
+                    () -> EntityType.Builder.of(Knight::new, MobCategory.MONSTER)
+                            .sized(1.5f, 1.75f)
+                            .build(new ResourceLocation(HOTUMobs.MODID, "knight").toString()));
 
 
     public static void register(IEventBus eventBus) {

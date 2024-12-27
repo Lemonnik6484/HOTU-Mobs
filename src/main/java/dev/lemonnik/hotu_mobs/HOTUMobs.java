@@ -3,6 +3,7 @@ package dev.lemonnik.hotu_mobs;
 import com.mojang.logging.LogUtils;
 import dev.lemonnik.hotu_mobs.entity.ModEntities;
 import dev.lemonnik.hotu_mobs.entity.client.Bear.BearRenderer;
+import dev.lemonnik.hotu_mobs.entity.client.Knight.KnightRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -45,6 +46,8 @@ public class HOTUMobs
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntities.BEAR.get(), BearRenderer::new);
+
+            EntityRenderers.register(ModEntities.KNIGHT.get(), KnightRenderer::new);
         }
     }
 }
