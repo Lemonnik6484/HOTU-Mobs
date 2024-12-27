@@ -36,7 +36,7 @@ public class Snake extends Animal implements GeoEntity {
                 .add(Attributes.MAX_HEALTH, 30D)
                 .add(Attributes.ATTACK_DAMAGE, 2.0f)
                 .add(Attributes.ATTACK_SPEED, 0.75f)
-                .add(Attributes.MOVEMENT_SPEED, 0.45f).build();
+                .add(Attributes.MOVEMENT_SPEED, 0.2f).build();
     }
 
     @Override

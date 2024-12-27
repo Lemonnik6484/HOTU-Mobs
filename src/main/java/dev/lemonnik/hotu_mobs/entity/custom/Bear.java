@@ -33,7 +33,7 @@ public class Bear extends Animal implements GeoEntity {
 
     public static AttributeSupplier setAttributes() {
         return Animal.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 55D)
+                .add(Attributes.MAX_HEALTH, 60D)
                 .add(Attributes.ATTACK_DAMAGE, 5.0f)
                 .add(Attributes.ATTACK_SPEED, 0.5f)
                 .add(Attributes.MOVEMENT_SPEED, 0.3f).build();
