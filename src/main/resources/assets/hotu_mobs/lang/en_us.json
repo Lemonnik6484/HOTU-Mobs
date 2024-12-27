@@ -1,3 +1,11 @@
 {
-  "entity.hotu_mobs.bear": "Cursed Bear"
+  "entity.hotu_mobs.bear": "Cursed Bear",
+  "entity.hotu_mobs.knight": "Cursed Knight",
+  "entity.hotu_mobs.gecko": "Cursed Gecko",
+  "entity.hotu_mobs.snake": "Cursed Snake",
+
+  "item.hotu_mobs.bear_spawn_egg": "Cursed Bear Spawn egg",
+  "item.hotu_mobs.knight_spawn_egg": "Cursed Knight Spawn egg",
+  "item.hotu_mobs.gecko_spawn_egg": "Cursed Gecko Spawn egg",
+  "item.hotu_mobs.snake_spawn_egg": "Cursed Snake Spawn egg"
 }
