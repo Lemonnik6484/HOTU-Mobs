@@ -4,6 +4,7 @@ import dev.lemonnik.hotu_mobs.HOTUMobs;
 import dev.lemonnik.hotu_mobs.entity.ModEntities;
 import dev.lemonnik.hotu_mobs.entity.custom.Bear;
 import dev.lemonnik.hotu_mobs.entity.custom.Knight;
+import dev.lemonnik.hotu_mobs.entity.custom.Snake;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.level.levelgen.Heightmap;
@@ -18,6 +19,7 @@ public class ModEvents {
     public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
         event.put(ModEntities.BEAR.get(), Bear.setAttributes());
         event.put(ModEntities.KNIGHT.get(), Knight.setAttributes());
+        event.put(ModEntities.SNAKE.get(), Snake.setAttributes());
     }
 
     @SubscribeEvent
@@ -26,6 +28,9 @@ public class ModEvents {
                 Animal::checkAnimalSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
 
         event.register(ModEntities.KNIGHT.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                Animal::checkAnimalSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
+
+        event.register(ModEntities.SNAKE.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                 Animal::checkAnimalSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
     }
 }
