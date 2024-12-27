@@ -8,12 +8,13 @@ import dev.lemonnik.hotu_mobs.entity.client.Knight.KnightRenderer;
 import dev.lemonnik.hotu_mobs.entity.client.Snake.SnakeRenderer;
 import dev.lemonnik.hotu_mobs.item.ModItems;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.server.ServerStartingEvent;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -29,9 +30,19 @@ public class HOTUMobs
         IEventBus modEventBus = context.getModEventBus();
 
         ModEntities.register(modEventBus);
+        ModItems.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
-        context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        modEventBus.addListener(this::addCreative);
+    }
+
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
+            event.accept(ModItems.BEAR_SPAWN_EGG);
+            event.accept(ModItems.KNIGHT_SPAWN_EGG);
+            event.accept(ModItems.GECKO_SPAWN_EGG);
+            event.accept(ModItems.SNAKE_SPAWN_EGG);
+        }
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
