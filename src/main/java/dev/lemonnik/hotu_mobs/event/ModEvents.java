@@ -2,10 +2,7 @@ package dev.lemonnik.hotu_mobs.event;
 
 import dev.lemonnik.hotu_mobs.HOTUMobs;
 import dev.lemonnik.hotu_mobs.entity.ModEntities;
-import dev.lemonnik.hotu_mobs.entity.custom.Bear;
-import dev.lemonnik.hotu_mobs.entity.custom.Gecko;
-import dev.lemonnik.hotu_mobs.entity.custom.Knight;
-import dev.lemonnik.hotu_mobs.entity.custom.Snake;
+import dev.lemonnik.hotu_mobs.entity.custom.*;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.level.levelgen.Heightmap;
@@ -22,6 +19,7 @@ public class ModEvents {
         event.put(ModEntities.KNIGHT.get(), Knight.setAttributes());
         event.put(ModEntities.SNAKE.get(), Snake.setAttributes());
         event.put(ModEntities.GECKO.get(), Gecko.setAttributes());
+        event.put(ModEntities.CROCODILE.get(), Gecko.setAttributes());
     }
 
     @SubscribeEvent
@@ -37,5 +35,9 @@ public class ModEvents {
 
         event.register(ModEntities.GECKO.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                 Animal::checkAnimalSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
+
+        event.register(ModEntities.CROCODILE.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                Animal::checkAnimalSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
+
     }
 }

@@ -29,6 +29,10 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntities.SNAKE, 0x424F34, 0x58653F,
                     new Item.Properties()));
 
+    public static final RegistryObject<Item> CROCODILE_SPAWN_EGG = ITEMS.register("crocodile_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.CROCODILE, 0x605b3E, 0xE5E685,
+                    new Item.Properties()));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

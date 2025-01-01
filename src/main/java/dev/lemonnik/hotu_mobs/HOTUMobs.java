@@ -3,6 +3,7 @@ package dev.lemonnik.hotu_mobs;
 import com.mojang.logging.LogUtils;
 import dev.lemonnik.hotu_mobs.entity.ModEntities;
 import dev.lemonnik.hotu_mobs.entity.client.Bear.BearRenderer;
+import dev.lemonnik.hotu_mobs.entity.client.Crocodile.CrocodileRenderer;
 import dev.lemonnik.hotu_mobs.entity.client.Gecko.GeckoRenderer;
 import dev.lemonnik.hotu_mobs.entity.client.Knight.KnightRenderer;
 import dev.lemonnik.hotu_mobs.entity.client.Snake.SnakeRenderer;
@@ -42,6 +43,7 @@ public class HOTUMobs
             event.accept(ModItems.KNIGHT_SPAWN_EGG);
             event.accept(ModItems.GECKO_SPAWN_EGG);
             event.accept(ModItems.SNAKE_SPAWN_EGG);
+            event.accept(ModItems.CROCODILE_SPAWN_EGG);
         }
     }
 
@@ -63,6 +65,7 @@ public class HOTUMobs
             EntityRenderers.register(ModEntities.KNIGHT.get(), KnightRenderer::new);
             EntityRenderers.register(ModEntities.SNAKE.get(), SnakeRenderer::new);
             EntityRenderers.register(ModEntities.GECKO.get(), GeckoRenderer::new);
+            EntityRenderers.register(ModEntities.CROCODILE.get(), CrocodileRenderer::new);
         }
     }
 }

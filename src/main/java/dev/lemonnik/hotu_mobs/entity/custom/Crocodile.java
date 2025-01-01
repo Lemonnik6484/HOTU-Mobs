@@ -24,18 +24,18 @@ import software.bernie.geckolib.core.animatable.instance.SingletonAnimatableInst
 import software.bernie.geckolib.core.animation.*;
 import software.bernie.geckolib.core.object.PlayState;
 
-public class Knight extends Animal implements GeoEntity {
+public class Crocodile extends Animal implements GeoEntity {
     private AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
 
-    public Knight(EntityType<? extends Animal> p_27557_, Level p_27558_) {
-        super(p_27557_, p_27558_);
+    public Crocodile(EntityType<? extends Animal> entityType, Level level) {
+        super(entityType, level);
     }
 
     public static AttributeSupplier setAttributes() {
         return Animal.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 100D)
-                .add(Attributes.ATTACK_DAMAGE, 5.0f)
-                .add(Attributes.ATTACK_SPEED, 0.5f)
+                .add(Attributes.MAX_HEALTH, 90D)
+                .add(Attributes.ATTACK_DAMAGE, 8.0f)
+                .add(Attributes.ATTACK_SPEED, 0.55f)
                 .add(Attributes.MOVEMENT_SPEED, 0.15f).build();
     }
 
@@ -55,7 +55,7 @@ public class Knight extends Animal implements GeoEntity {
     @Nullable
     @Override
     public AgeableMob getBreedOffspring(ServerLevel serverLevel, AgeableMob ageableMob) {
-        return ModEntities.KNIGHT.get().create(serverLevel);
+        return ModEntities.BEAR.get().create(serverLevel);
     }
 
     @Override
@@ -64,7 +64,7 @@ public class Knight extends Animal implements GeoEntity {
         controllers.add(new AnimationController<>(this, "attackController", 0, this::attackPredicate));
     }
 
-    private PlayState attackPredicate(AnimationState<Knight> AnimationState) {
+    private PlayState attackPredicate(AnimationState<Crocodile> AnimationState) {
         if(this.swinging && AnimationState.getController().getAnimationState().equals(AnimationController.State.STOPPED)) {
             AnimationState.getController().forceAnimationReset();
             AnimationState.getController().setAnimation(RawAnimation.begin().then("attack.animation", Animation.LoopType.PLAY_ONCE));
@@ -73,7 +73,7 @@ public class Knight extends Animal implements GeoEntity {
         return PlayState.CONTINUE;
     }
 
-    private PlayState predicate(AnimationState<Knight> AnimationState) {
+    private PlayState predicate(AnimationState<Crocodile> AnimationState) {
         if(AnimationState.isMoving()) {
             AnimationState.getController().setAnimation(RawAnimation.begin().then("walk.animation", Animation.LoopType.LOOP));
             return PlayState.CONTINUE;

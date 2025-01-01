@@ -1,10 +1,7 @@
 package dev.lemonnik.hotu_mobs.entity;
 
 import dev.lemonnik.hotu_mobs.HOTUMobs;
-import dev.lemonnik.hotu_mobs.entity.custom.Bear;
-import dev.lemonnik.hotu_mobs.entity.custom.Gecko;
-import dev.lemonnik.hotu_mobs.entity.custom.Knight;
-import dev.lemonnik.hotu_mobs.entity.custom.Snake;
+import dev.lemonnik.hotu_mobs.entity.custom.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -40,6 +37,13 @@ public class ModEntities {
                     () -> EntityType.Builder.of(Gecko::new, MobCategory.MONSTER)
                             .sized(1.5f, 1.75f)
                             .build(new ResourceLocation(HOTUMobs.MODID, "gecko").toString()));
+
+    public static final RegistryObject<EntityType<Crocodile>> CROCODILE =
+            ENTITY_TYPES.register("crocodile",
+                    () -> EntityType.Builder.of(Crocodile::new, MobCategory.MONSTER)
+                            .sized(1.5f, 1.75f)
+                            .build(new ResourceLocation(HOTUMobs.MODID, "crocodile").toString()));
+
 
 
     public static void register(IEventBus eventBus) {
