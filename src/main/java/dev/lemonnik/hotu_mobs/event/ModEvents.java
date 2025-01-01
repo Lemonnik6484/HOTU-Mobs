@@ -20,6 +20,7 @@ public class ModEvents {
         event.put(ModEntities.SNAKE.get(), Snake.setAttributes());
         event.put(ModEntities.GECKO.get(), Gecko.setAttributes());
         event.put(ModEntities.CROCODILE.get(), Gecko.setAttributes());
+        event.put(ModEntities.FOREST_SPIRIT.get(), ForestSpirit.setAttributes());
     }
 
     @SubscribeEvent
@@ -37,6 +38,9 @@ public class ModEvents {
                 Animal::checkAnimalSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
 
         event.register(ModEntities.CROCODILE.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                Animal::checkAnimalSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
+
+        event.register(ModEntities.FOREST_SPIRIT.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                 Animal::checkAnimalSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
 
     }

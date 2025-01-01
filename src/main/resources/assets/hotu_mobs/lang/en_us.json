@@ -4,10 +4,12 @@
   "entity.hotu_mobs.gecko": "Cursed Gecko",
   "entity.hotu_mobs.snake": "Cursed Snake",
   "entity.hotu_mobs.crocodile": "Cursed Crocodile",
+  "entity.hotu_mobs.forest_spirit": "Forest Spirit",
 
   "item.hotu_mobs.bear_spawn_egg": "Cursed Bear Spawn egg",
   "item.hotu_mobs.knight_spawn_egg": "Cursed Knight Spawn egg",
   "item.hotu_mobs.gecko_spawn_egg": "Cursed Gecko Spawn egg",
   "item.hotu_mobs.snake_spawn_egg": "Cursed Snake Spawn egg",
-  "item.hotu_mobs.crocodile_spawn_egg": "Cursed Crocodile Spawn egg"
+  "item.hotu_mobs.crocodile_spawn_egg": "Cursed Crocodile Spawn egg",
+  "item.hotu_mobs.forest_spirit_spawn_egg": "Forest Spirit Spawn egg"
 }

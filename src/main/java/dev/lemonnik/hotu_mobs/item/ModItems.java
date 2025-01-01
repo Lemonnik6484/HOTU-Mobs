@@ -33,6 +33,10 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntities.CROCODILE, 0x605b3E, 0xE5E685,
                     new Item.Properties()));
 
+    public static final RegistryObject<Item> FOREST_SPIRIT_SPAWN_EGG = ITEMS.register("forest_spirit_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.FOREST_SPIRIT, 0x35311B, 0x5D453A,
+                    new Item.Properties()));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

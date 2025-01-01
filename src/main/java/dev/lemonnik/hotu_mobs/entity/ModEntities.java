@@ -44,6 +44,11 @@ public class ModEntities {
                             .sized(1.5f, 1.75f)
                             .build(new ResourceLocation(HOTUMobs.MODID, "crocodile").toString()));
 
+    public static final RegistryObject<EntityType<ForestSpirit>> FOREST_SPIRIT =
+            ENTITY_TYPES.register("forest_spirit",
+                    () -> EntityType.Builder.of(ForestSpirit::new, MobCategory.MONSTER)
+                            .sized(1.5f, 1.75f)
+                            .build(new ResourceLocation(HOTUMobs.MODID, "forest_spirit").toString()));
 
 
     public static void register(IEventBus eventBus) {
