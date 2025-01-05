@@ -33,8 +33,8 @@ public class ForestSpirit extends Animal implements GeoEntity {
 
     public static AttributeSupplier setAttributes() {
         return Animal.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 30D)
-                .add(Attributes.ATTACK_DAMAGE, 2.0f)
+                .add(Attributes.MAX_HEALTH, 200D)
+                .add(Attributes.ATTACK_DAMAGE, 8.0f)
                 .add(Attributes.ATTACK_SPEED, 0.75f)
                 .add(Attributes.MOVEMENT_SPEED, 0.2f).build();
     }

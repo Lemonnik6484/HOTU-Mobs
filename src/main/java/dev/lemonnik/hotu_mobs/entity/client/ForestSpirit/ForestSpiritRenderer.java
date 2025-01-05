@@ -15,7 +15,7 @@ public class ForestSpiritRenderer extends GeoEntityRenderer<ForestSpirit> {
 
     @Override
     public ResourceLocation getTextureLocation(ForestSpirit animatable) {
-        return new ResourceLocation(HOTUMobs.MODID, "textures/entity/knight.png");
+        return new ResourceLocation(HOTUMobs.MODID, "textures/entity/forest_spirit.png");
     }
 
     @Override

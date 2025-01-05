@@ -13,17 +13,17 @@ import software.bernie.geckolib.model.data.EntityModelData;
 public class ForestSpiritModel extends GeoModel<ForestSpirit> {
     @Override
     public ResourceLocation getModelResource(ForestSpirit animatable) {
-        return new ResourceLocation(HOTUMobs.MODID, "geo/knight.geo.json");
+        return new ResourceLocation(HOTUMobs.MODID, "geo/forest_spirit.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(ForestSpirit animatable) {
-        return new ResourceLocation(HOTUMobs.MODID, "textures/knight.png");
+        return new ResourceLocation(HOTUMobs.MODID, "textures/forest_spirit.png");
     }
 
     @Override
     public ResourceLocation getAnimationResource(ForestSpirit animatable) {
-        return new ResourceLocation(HOTUMobs.MODID, "animations/knight.animation.json");
+        return new ResourceLocation(HOTUMobs.MODID, "animations/forest_spirit.animation.json");
     }
 
     @Override
