@@ -41,12 +41,9 @@ public class HOTUMobs
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
-            event.accept(ModItems.BEAR_SPAWN_EGG);
-            event.accept(ModItems.KNIGHT_SPAWN_EGG);
-            event.accept(ModItems.GECKO_SPAWN_EGG);
-            event.accept(ModItems.SNAKE_SPAWN_EGG);
-            event.accept(ModItems.CROCODILE_SPAWN_EGG);
-            event.accept(ModItems.FOREST_SPIRIT_SPAWN_EGG);
+            ModItems.ITEMS.getEntries().forEach(item -> {
+                event.accept(item.get());
+            });
         }
     }
 
