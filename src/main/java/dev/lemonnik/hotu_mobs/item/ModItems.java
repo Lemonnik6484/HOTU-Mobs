@@ -41,6 +41,10 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntities.CURSED_HUMAN, 0xE7E7E7, 0xE2C790,
                     new Item.Properties()));
 
+    public static final RegistryObject<Item> SCINT_SLIME_SPAWN_EGG = ITEMS.register("scint_slime_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.CURSED_HUMAN, 0xE7E7E7, 0xE2C790,
+                    new Item.Properties()));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

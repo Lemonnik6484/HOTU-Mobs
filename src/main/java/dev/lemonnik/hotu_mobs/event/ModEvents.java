@@ -22,6 +22,7 @@ public class ModEvents {
         event.put(ModEntities.CROCODILE.get(), Gecko.setAttributes());
         event.put(ModEntities.FOREST_SPIRIT.get(), ForestSpirit.setAttributes());
         event.put(ModEntities.CURSED_HUMAN.get(), CursedHuman.setAttributes());
+        event.put(ModEntities.SCINT_SLIME.get(), ScintSlime.setAttributes());
     }
 
     @SubscribeEvent
@@ -45,6 +46,9 @@ public class ModEvents {
                 Animal::checkAnimalSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
 
         event.register(ModEntities.CURSED_HUMAN.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                Animal::checkAnimalSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
+
+        event.register(ModEntities.SCINT_SLIME.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                 Animal::checkAnimalSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
 
     }
