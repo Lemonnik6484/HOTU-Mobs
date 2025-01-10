@@ -6,6 +6,8 @@
   "entity.hotu_mobs.crocodile": "Cursed Crocodile",
   "entity.hotu_mobs.forest_spirit": "Forest Spirit",
   "entity.hotu_mobs.cursed_human": "Cursed Human",
+  "entity.hotu_mobs.scint_slime": "Scint Slime",
+  "entity.hotu_mobs.scintonit_slime": "Scintonit Slime",
 
   "item.hotu_mobs.bear_spawn_egg": "Cursed Bear Spawn egg",
   "item.hotu_mobs.knight_spawn_egg": "Cursed Knight Spawn egg",
@@ -13,5 +15,7 @@
   "item.hotu_mobs.snake_spawn_egg": "Cursed Snake Spawn egg",
   "item.hotu_mobs.crocodile_spawn_egg": "Cursed Crocodile Spawn egg",
   "item.hotu_mobs.forest_spirit_spawn_egg": "Forest Spirit Spawn egg",
-  "item.hotu_mobs.cursed_human_spawn_egg": "Cursed Human Spawn egg"
+  "item.hotu_mobs.cursed_human_spawn_egg": "Cursed Human Spawn egg",
+  "item.hotu_mobs.scint_slime_spawn_egg": "Scint Slime Spawn egg",
+  "item.hotu_mobs.scintonit_slime_spawn_egg": "Scintonit Slime Spawn egg"
 }
