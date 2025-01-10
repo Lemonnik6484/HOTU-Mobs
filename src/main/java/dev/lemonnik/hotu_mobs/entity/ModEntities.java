@@ -62,6 +62,12 @@ public class ModEntities {
                             .sized(1.5f, 1.75f)
                             .build(new ResourceLocation(HOTUMobs.MODID, "scint_slime").toString()));
 
+    public static final RegistryObject<EntityType<ScintonitSlime>> SCINTONIT_SLIME =
+            ENTITY_TYPES.register("scintonit_slime",
+                    () -> EntityType.Builder.of(ScintonitSlime::new, MobCategory.MONSTER)
+                            .sized(1.5f, 1.75f)
+                            .build(new ResourceLocation(HOTUMobs.MODID, "scintonit_slime").toString()));
+
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
