@@ -37,6 +37,10 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntities.FOREST_SPIRIT, 0x35311B, 0x5D453A,
                     new Item.Properties()));
 
+    public static final RegistryObject<Item> CURSED_HUMAN_SPAWN_EGG = ITEMS.register("cursed_human_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.CURSED_HUMAN, 0xE7E7E7, 0xE2C790,
+                    new Item.Properties()));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

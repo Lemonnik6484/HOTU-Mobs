@@ -50,6 +50,12 @@ public class ModEntities {
                             .sized(1.5f, 1.75f)
                             .build(new ResourceLocation(HOTUMobs.MODID, "forest_spirit").toString()));
 
+    public static final RegistryObject<EntityType<CursedHuman>> CURSED_HUMAN =
+            ENTITY_TYPES.register("cursed_human",
+                    () -> EntityType.Builder.of(CursedHuman::new, MobCategory.MONSTER)
+                            .sized(1.5f, 1.75f)
+                            .build(new ResourceLocation(HOTUMobs.MODID, "cursed_human").toString()));
+
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
