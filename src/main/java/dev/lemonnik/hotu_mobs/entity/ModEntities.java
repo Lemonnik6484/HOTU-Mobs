@@ -69,6 +69,12 @@ public class ModEntities {
                             .build(new ResourceLocation(HOTUMobs.MODID, "scintonit_slime").toString()));
 
 
+    public static final RegistryObject<EntityType<CursedVillager>> CURSED_VILLAGER =
+            ENTITY_TYPES.register("cursed_villager",
+                    () -> EntityType.Builder.of(CursedVillager::new, MobCategory.MONSTER)
+                            .sized(1.5f, 1.75f)
+                            .build(new ResourceLocation(HOTUMobs.MODID, "cursed_villager").toString()));
+
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
     }

@@ -49,6 +49,10 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntities.SCINTONIT_SLIME, 0xae1616, 0x282828,
                     new Item.Properties()));
 
+    public static final RegistryObject<Item> CURSED_VILLAGER_SPAWN_EGG = ITEMS.register("cursed_villager_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.SCINTONIT_SLIME, 0x8f6a6b, 0x916f8a,
+                    new Item.Properties()));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

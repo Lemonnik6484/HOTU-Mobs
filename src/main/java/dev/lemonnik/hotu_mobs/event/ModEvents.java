@@ -24,6 +24,7 @@ public class ModEvents {
         event.put(ModEntities.CURSED_HUMAN.get(), CursedHuman.setAttributes());
         event.put(ModEntities.SCINT_SLIME.get(), ScintSlime.setAttributes());
         event.put(ModEntities.SCINTONIT_SLIME.get(), ScintonitSlime.setAttributes());
+        event.put(ModEntities.CURSED_VILLAGER.get(), ScintonitSlime.setAttributes());
     }
 
     @SubscribeEvent
@@ -53,6 +54,9 @@ public class ModEvents {
                 Animal::checkAnimalSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
 
         event.register(ModEntities.SCINTONIT_SLIME.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                Animal::checkAnimalSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
+
+        event.register(ModEntities.CURSED_VILLAGER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                 Animal::checkAnimalSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
 
     }
