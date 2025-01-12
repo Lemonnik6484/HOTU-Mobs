@@ -15,7 +15,7 @@ public class ScintonitSlimeRenderer extends GeoEntityRenderer<ScintonitSlime> {
 
     @Override
     public ResourceLocation getTextureLocation(ScintonitSlime animatable) {
-        return new ResourceLocation(HOTUMobs.MODID, "textures/entity/scint_slime.png");
+        return new ResourceLocation(HOTUMobs.MODID, "textures/entity/scintonit_slime.png");
     }
 
     @Override

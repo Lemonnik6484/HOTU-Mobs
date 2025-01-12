@@ -10,6 +10,7 @@ import dev.lemonnik.hotu_mobs.entity.client.ForestSpirit.ForestSpiritRenderer;
 import dev.lemonnik.hotu_mobs.entity.client.Gecko.GeckoRenderer;
 import dev.lemonnik.hotu_mobs.entity.client.Knight.KnightRenderer;
 import dev.lemonnik.hotu_mobs.entity.client.ScintSlime.ScintSlimeRenderer;
+import dev.lemonnik.hotu_mobs.entity.client.ScintonitSlime.ScintonitSlimeRenderer;
 import dev.lemonnik.hotu_mobs.entity.client.Snake.SnakeRenderer;
 import dev.lemonnik.hotu_mobs.item.ModItems;
 import net.minecraft.client.renderer.entity.EntityRenderers;
@@ -71,6 +72,7 @@ public class HOTUMobs
             EntityRenderers.register(ModEntities.FOREST_SPIRIT.get(), ForestSpiritRenderer::new);
             EntityRenderers.register(ModEntities.CURSED_HUMAN.get(), CursedHumanRenderer::new);
             EntityRenderers.register(ModEntities.SCINT_SLIME.get(), ScintSlimeRenderer::new);
+            EntityRenderers.register(ModEntities.SCINTONIT_SLIME.get(), ScintonitSlimeRenderer::new);
             EntityRenderers.register(ModEntities.CURSED_VILLAGER.get(), CursedVillagerRenderer::new);
         }
     }
