@@ -8,7 +8,7 @@ import software.bernie.geckolib.model.GeoModel;
 public class ScintonitSlimeModel extends GeoModel<ScintonitSlime> {
     @Override
     public ResourceLocation getModelResource(ScintonitSlime animatable) {
-        return new ResourceLocation(HOTUMobs.MODID, "geo/scintonit_slime.geo.json");
+        return new ResourceLocation(HOTUMobs.MODID, "geo/scint_slime.geo.json");
     }
 
     @Override
@@ -18,6 +18,6 @@ public class ScintonitSlimeModel extends GeoModel<ScintonitSlime> {
 
     @Override
     public ResourceLocation getAnimationResource(ScintonitSlime animatable) {
-        return new ResourceLocation(HOTUMobs.MODID, "animations/scintonit_slime.animation.json");
+        return new ResourceLocation(HOTUMobs.MODID, "animations/scint_slime.animation.json");
     }
 }
